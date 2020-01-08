@@ -35,21 +35,22 @@ class DynamicGroupPlugin {
           // User is in the group named like the package scope, allow it.
           return callback(null, true);
         }
-        
-        pkg[action].forEach((authGroup, index) => {
-          if (that.configGroup.hasOwnProperty(authGroup)) {
-            const userList = that.configGroup[authGroup] || [];
-            if (userList.includes(userName)) {
-              return callback(null, true);
-            }
-          }
-        });
       }
 
       // Direct group access.
       const hasPermission = pkg[action].some(group => userName === group || userGroups.includes(group));
       if (hasPermission) {
         return callback(null, true);
+      }
+      // From our custom groups
+      for (let i = 0, l = pkg[action].length; i < l; i++) {
+        const authGroup = pkg[action][i];
+        if (that.configGroup.hasOwnProperty(authGroup)) {
+          const userList = that.configGroup[authGroup] || [];
+          if (userList.includes(userName)) {
+            return callback(null, true);
+          }
+        }
       }
 
       if (userName) {
@@ -73,9 +74,9 @@ class DynamicGroupPlugin {
     const hasSupport = isDefined ? pkg[action] : false;
 
     if (hasSupport === false) {
-      return callback(null, undefined);
+      return this.allow_action(action)(user, pkg, callback);
     }
-    return this.allow_action(action)(user, pkg, callback);
+    return callback(null, undefined);
   }
 }
 
