@@ -1,0 +1,25 @@
+{
+  "name": "verdaccio-groups",
+  "version": "1.0.0",
+  "description": "Verdaccio Plugin to grant access to group names provided in the file",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ankitjain28may/verdaccio-groups.git"
+  },
+  "keywords": [
+    "verdaccio",
+    "verdaccio-plugin",
+    "verdaccio-authorization"
+  ],
+  "author": "Ankit Jain <ankitjain28may77@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "http-errors": "^1.7.3",
+    "js-yaml": "^3.13.1"
+  },
+  "bugs": {
+    "url": "https://github.com/ankitjain28may/verdaccio-groups/issues"
+  },
+  "homepage": "https://github.com/ankitjain28may/verdaccio-groups#readme"
+}
