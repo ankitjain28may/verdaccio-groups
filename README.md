@@ -1,6 +1,6 @@
 # verdaccio-groups
 
-Verdaccio Plugin to handle dynamic groups in package access specification, a king of authorization level over authentication. Inspired from the [verdaccio-groupnames
+Verdaccio Plugin to handle dynamic groups in package access specification, a kind of authorization level over authentication. Inspired from the [verdaccio-groupnames
 ](https://github.com/deinstapel/verdaccio-groupnames) plugin.
 
 ## Installation
