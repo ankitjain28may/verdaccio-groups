@@ -1,5 +1,8 @@
 # verdaccio-groups
 
+[![npm version](https://badge.fury.io/js/verdaccio-groups.png)](https://badge.fury.io/js/verdaccio-groups)
+[![npm](https://img.shields.io/npm/dt/verdaccio-groups.svg)](https://www.npmjs.com/package/verdaccio-groups)
+
 Verdaccio Plugin to handle dynamic groups in package access specification, a kind of authorization level over authentication. Inspired from the [verdaccio-groupnames
 ](https://github.com/deinstapel/verdaccio-groupnames) plugin.
 
