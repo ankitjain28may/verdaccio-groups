@@ -1,6 +1,6 @@
 {
   "name": "verdaccio-groups",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Verdaccio Plugin to grant access to group names provided in the file",
   "main": "index.js",
   "repository": {
