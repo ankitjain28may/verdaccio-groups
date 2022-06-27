@@ -38,7 +38,7 @@ class DynamicGroupPlugin {
       }
 
       // Direct group access.
-      const hasPermission = pkg[action].some(group => userName === group || userGroups.includes(group));
+      const hasPermission = (pkg[action] || []).some(group => userName === group || userGroups.includes(group));
       if (hasPermission) {
         return callback(null, true);
       }
